@@ -1,20 +1,24 @@
-import React from 'react'
-import {clients}  from "../constants/constants"
-import styles from "../style"
+import React from "react";
+import { clients } from "../constants/constants";
+import styles, {layout} from "../style";
 
 const Clients = () => (
-<section className={`${styles.flexCenter} my-4`}>
-  <div  className={`${styles.flexCenter} flex-wrap w-full`}>
-    {clients.map((client)=>(
-      <div key={client.id}>
-        <img src={client.logo} alt="client" className='w-[50%] h-[50%] flex justify-between flex-col items-center' />
-      </div>
-    ))
+  <section className={`${styles.flexCenter} my-4`}>
+    <div className={`${styles.flexCenter} flex-wrap w-full`}>
+      {clients.map((client) => (
+        <div
+          key={client.id}
+          className={`${styles.flexCenter} sm:min-w-[192px] min-w-[120px] flex-1`}
+        >
+          <img
+            src={client.logo}
+            alt="client"
+            className="sm:w-[192px] w-[100px] object-contain"
+          />
+        </div>
+      ))}
+    </div>
+  </section>
+);
 
-    }
-  </div>
-
-</section>
-)
-
-export default Clients
+export default Clients;
