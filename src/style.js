@@ -17,6 +17,7 @@ const styles = {
   };
   
   export const layout = {
+    
     section: `flex md:flex-row flex-col ${styles.paddingY}`,
     sectionReverse: `flex md:flex-row flex-col-reverse ${styles.paddingY}`,
   
